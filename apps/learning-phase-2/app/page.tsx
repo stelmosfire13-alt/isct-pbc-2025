@@ -1,17 +1,14 @@
-import { redirect } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
-
-export default async function HomePage() {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  // Redirect authenticated users to pets page
-  if (user) {
-    redirect('/pets')
-  }
-
-  // Redirect unauthenticated users to login
-  redirect('/login')
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gradient-to-b from-blue-50 to-white">
+      <div className="text-center">
+        <h1 className="text-6xl font-bold text-gray-900 mb-4">
+          🐾 Hello World 🐾
+        </h1>
+        <p className="text-xl text-gray-600">
+          Welcome to Pet Management App
+        </p>
+      </div>
+    </main>
+  )
 }

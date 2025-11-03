@@ -6,23 +6,21 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-model Pet {
-  id        String   @id @default(uuid()) @db.Uuid
-  userId    String   @map("user_id") @db.Uuid
-  name      String   @db.VarChar(50)
-  category  String   @db.VarChar(50)
-  birthday  DateTime @db.Date
-  gender    String   @db.VarChar(20)
-  imagePath String?  @map("image_path") @db.Text
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
-
-  @@index([userId], map: "idx_pets_user_id")
-  @@index([createdAt], map: "idx_pets_created_at")
-  @@map("pets")
-}
+// Pet model for future use
+// Uncomment and run `npx prisma db push` when ready to use database
+//
+// model Pet {
+//   id           Int      @id @default(autoincrement())
+//   name         String
+//   species      String
+//   age          Int
+//   color        String
+//   breed        String
+//   isVaccinated Boolean  @default(false)
+//   createdAt    DateTime @default(now())
+//   updatedAt    DateTime @updatedAt
+// }
