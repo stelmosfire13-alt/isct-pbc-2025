@@ -19,6 +19,7 @@ import {
 import { Navbar } from "@/components/layout/navbar"
 import { ArrowLeft, Edit, Trash2 } from "lucide-react"
 import { format } from "date-fns"
+import { HealthChat } from "@/components/pets/health-chat"
 
 interface Pet {
   id: string
@@ -237,6 +238,17 @@ export default function PetDetailPage() {
           </CardContent>
         </Card>
       </div>
+
+       <HealthChat
+        petInfo={{
+          name: pet.name,
+          category: pet.category,
+          breed: pet.breed,
+          gender: pet.gender,
+          age: pet.birthday ? calculateAge(pet.birthday) : undefined,
+        }}
+      />
+
     </div>
   )
 }
