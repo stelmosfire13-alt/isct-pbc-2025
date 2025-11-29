@@ -662,6 +662,7 @@ npx prisma db pull
 ```
 
 5. If successful, you should see this error message (which is actually good!):
+
 ```
 Environment variables loaded from .env
 Datasource "db": PostgreSQL database "postgres"

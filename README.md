@@ -13,5 +13,9 @@
 - [Programming Basics](./docs/learning-phase-2/README.md)
 
 ### #3 2025/11/15 Learning Phase 3
+- [Using Claude Code(English)](./docs/learning-phase-3/01-AI-setup.md)
+- [Using Claude Code(Japanese)](./docs/learning-phase-3/01-AI-setup-jp.md)
 
 ### #4 2025/11/29 Learning Phase 4
+- [AIを組み込んだアプリ開発](./docs/learning-phase-4/01-developing-applications-with-AI-integration-jp.md)
+- [Developing Applications with AI Integration](./docs/learning-phase-4/01-developing-applications-with-AI-integration-en.md)
